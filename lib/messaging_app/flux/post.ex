@@ -3,10 +3,10 @@ defmodule MessagingApp.Flux.Post do
   import Ecto.Changeset
 
   schema "posts" do
-    field :likes_count, :integer
+    field :username, :string, default: "Simon"
     field :message, :string
-    field :reposts_count, :integer
-    field :username, :string
+    field :likes_count, :integer, default: 0
+    field :reposts_count, :integer, default: 0
 
     timestamps()
   end
@@ -14,7 +14,8 @@ defmodule MessagingApp.Flux.Post do
   @doc false
   def changeset(post, attrs) do
     post
-    |> cast(attrs, [:username, :message, :likes_count, :reposts_count])
-    |> validate_required([:username, :message, :likes_count, :reposts_count])
+    |> cast(attrs, [:message])
+    |> validate_required([:message])
+    |> validate_length(:message, min: 1, max: 250)
   end
 end
