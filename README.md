@@ -1,4 +1,4 @@
-Quick Twitter-like app made with Elixir and Phoenix to illustrate Chris McCord's video "Build a real-time Twitter clone in 15 minutes with LiveView and Phoenix 1.5" (https://youtu.be/MZvmYaFkNJI).
+Quick Twitter-like app made with Elixir and Phoenix Liveview to illustrate Chris McCord's video "Build a real-time Twitter clone in 15 minutes with LiveView and Phoenix 1.5" (https://youtu.be/MZvmYaFkNJI).
 
 # MessagingApp
 
