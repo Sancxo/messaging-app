@@ -26,10 +26,10 @@ defmodule MessagingAppWeb.PostLive.PostComponent do
           </div>
 
           <div>
-            <%= live_patch to: Routes.post_index_path(@socket, :edit, @post.id) do: %>
+            <%= live_patch to: Routes.post_index_path(@socket, :edit, @post.id) do %>
               <i class="far fa-edit"></i>
             <% end %>
-            <%= link to: "#", phx_click: "delete", phx_value_id: @post.id, data: [confirm: "Are you sure ?"] do: %>
+            <%= link to: "#", phx_click: "delete", phx_value_id: @post.id, data: [confirm: "Are you sure ?"] do %>
 
             <% end %>
           </div>
